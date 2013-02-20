@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
 
 </head>
 <body>
@@ -77,7 +77,7 @@
   <script id="article-template" type="text/x-handlebars-template">
     <article>
       <header>
-        <h1>{{title}}</h1>
+        <h3>{{title}}</h3>
       </header>
 
       {{{description}}}
@@ -94,6 +94,11 @@
       $('[href=#]').on('click', function (e) {
         e.preventDefault();
       });
+
+      $('.btn').on('touchend', function (e) {
+        $(this).trigger('click');
+        e.preventDefault();
+      })
 
       $.get("http://pipes.yahoo.com/pipes/pipe.run?_id=2FV68p9G3BGVbc7IdLq02Q&_render=json&feedcount=10&feedurl=http%3A%2F%2Fdestiny.bungie.org%2Frss.xml")
         .done(onDone);
