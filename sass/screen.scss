@@ -5,6 +5,17 @@
 
 @import "compass/css3";
 
-.btn {
-  border-radius: 0;
+body {
+  padding-top: 50px;
 }
+
+.btn {
+  @include border-radius(0);
+}
+
+.navbar-search {
+  .search-query {
+    @include border-radius(0);
+  }
+}
+
