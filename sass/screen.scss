@@ -5,6 +5,15 @@
 
 @import "compass/css3";
 
+@font-face {
+  font-family: Calibri;
+  src: url(calibri.woff);
+}
+
+body {
+  background: rgb(195, 201, 234) url(../images/background.png) no-repeat;
+}
+
 .btn {
   @include border-radius(0);
 }
@@ -21,6 +30,41 @@
   }
 }
 
-.brand {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+.navbar {
+
+  .navbar-inner {
+    background: none;
+  }
+
+  .btn-navbar {
+    background: none;
+
+    &:active,
+    &:focus,
+    &:hover,
+    .active {
+      background: rgba(229, 229, 229, 0.3);
+    }
+  }
+
+  .brand {
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    color: #ffffff;
+
+    // // needs latest Compass, add '@import "compass"' to your scss
+    // background-color: #ecedf1; // Old browsers
+    // @include filter-gradient(#ecedf1, #5b6990, vertical); // IE6-9
+    // @include background-image(linear-gradient(top,  #ecedf1 0%,#5b6990 100%));
+
+    // @include background-clip(text);
+    // -webkit-text-fill-color: transparent;
+
+    @include text-shadow(none);
+    padding: 0 0 0 10px;
+  }
 }

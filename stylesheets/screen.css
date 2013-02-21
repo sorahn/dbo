@@ -2,7 +2,17 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
+@font-face {
+  font-family: Calibri;
+  src: url(calibri.woff);
+}
+
+/* line 13, ../sass/screen.scss */
+body {
+  background: #c3c9ea url(../images/background.png) no-repeat;
+}
+
+/* line 17, ../sass/screen.scss */
 .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -11,7 +21,7 @@
   border-radius: 0;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .navbar-search .search-query {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -20,7 +30,7 @@
   border-radius: 0;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -29,7 +39,27 @@
   border-radius: 0;
 }
 
-/* line 24, ../sass/screen.scss */
-.brand {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+/* line 35, ../sass/screen.scss */
+.navbar .navbar-inner {
+  background: none;
+}
+/* line 39, ../sass/screen.scss */
+.navbar .btn-navbar {
+  background: none;
+}
+/* line 45, ../sass/screen.scss */
+.navbar .btn-navbar:active, .navbar .btn-navbar:focus, .navbar .btn-navbar:hover,
+.navbar .btn-navbar .active {
+  background: rgba(229, 229, 229, 0.3);
+}
+/* line 50, ../sass/screen.scss */
+.navbar .brand {
+  font-family: Calibri;
+  font-weight: 600;
+  font-size: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  text-shadow: none;
+  padding: 0 0 0 10px;
 }
