@@ -7,12 +7,12 @@
   src: url(calibri.woff);
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 body {
   background: #c3c9ea url(../images/background.png) no-repeat;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -21,7 +21,7 @@ body {
   border-radius: 0;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .navbar-search .search-query {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -30,29 +30,53 @@ body {
   border-radius: 0;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  color: #ffffff;
+  text-shadow: 0 1px 0 black;
+}
+/* line 41, ../sass/screen.scss */
+.nav-collapse .nav > li > a:hover, .nav-collapse .nav > li > a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
+  color: #ffffff;
+  background: rgba(229, 229, 229, 0.4);
+}
+/* line 48, ../sass/screen.scss */
+.nav-collapse .nav {
+  margin-bottom: 0;
+}
+/* line 53, ../sass/screen.scss */
+.nav-collapse .navbar-form,
+.nav-collapse .navbar-search {
+  margin: 0;
+  border: 0;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: rgba(229, 229, 229, 0.3);
+  color: #ffffff;
+}
+/* line 70, ../sass/screen.scss */
 .navbar .navbar-inner {
   background: none;
 }
-/* line 39, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .navbar .btn-navbar {
   background: none;
 }
-/* line 45, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar:focus, .navbar .btn-navbar:hover,
 .navbar .btn-navbar .active {
-  background: rgba(229, 229, 229, 0.3);
+  background: rgba(229, 229, 229, 0.2);
 }
-/* line 50, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .navbar .brand {
   font-family: Calibri;
   font-weight: 600;

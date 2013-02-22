@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Destiny Awaits</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
@@ -29,19 +29,19 @@
           <span class="icon-bar"></span>
         </a>
 
-        <a class="brand" href="#">DESTINY</a>
+        <a class="brand" href="/">DESTINY</a>
 
         <div class="nav-collapse">
           <ul class="nav">
+            <li>
+              <form class="navbar-search">
+                <input type="text" class="search-query input-block-level" placeholder="Search The News Archive">
+              </form>
+            </li>
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Forum</a></li>
             <li class="divider-vertical divider-horizontal"></li>
-            <li>
-              <form class="navbar-search">
-                <input type="text" class="search-query" placeholder="Search Tne News Archive">
-              </form>
-            </li>
           </ul>
         </div><!--/.nav-collapse -->
 
@@ -90,7 +90,7 @@
         e.preventDefault();
       })
 
-      $('.nav-collapse').on('hidden', function () {
+      $('.nav-collapse').on('hide', function () {
         var $btn = $('.btn-navbar'),
             $parent = $btn.parent(),
             $next = $btn.next();
@@ -101,6 +101,9 @@
       $.get("http://pipes.yahoo.com/pipes/pipe.run?_id=2FV68p9G3BGVbc7IdLq02Q&_render=json&feedcount=10&feedurl=http%3A%2F%2Fdestiny.bungie.org%2Frss.xml")
         .done(onDone);
 
+      setTimeout( hideAddressBar, 5);
+
+      // Functions
       function onDone(data) {
         var template = Handlebars.compile( $('#article-template').html() ),
             $articles = $('#articles');
@@ -108,6 +111,14 @@
         $(data.value.items).each( function () {
           $articles.append( template(this) );
         });
+      }
+
+      function hideAddressBar() {
+        $('body').css('paddingBottom', 5000);
+        window.scrollTo(0, 1);
+        setTimeout( function () {
+          $('body').css('paddingBottom', 0);
+        }, 50);
       }
 
     })

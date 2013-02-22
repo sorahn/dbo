@@ -10,6 +10,12 @@
   src: url(calibri.woff);
 }
 
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+
 body {
   background: rgb(195, 201, 234) url(../images/background.png) no-repeat;
 }
@@ -25,12 +31,41 @@ body {
 }
 
 .nav-collapse {
-  .nav > li > a, .dropdown-menu a {
-    @include border-radius(0);
+  .nav > li >, .dropdown-menu {
+    a {
+      @include border-radius(0);
+      color: #ffffff;
+      text-shadow: 0 1px 0 #000000;
+
+      &:hover,
+      &:focus {
+        color: #ffffff;
+        background: rgba(229, 229, 229, 0.4);
+      }
+    }
+  }
+
+  .nav {
+    margin-bottom: 0;
+  }
+
+  .navbar-form,
+  .navbar-search {
+    margin: 0;
+    border: 0;
   }
 }
 
 .navbar {
+
+  .nav > .active > {
+    a,
+    a:hover,
+    a:focus {
+      background: rgba(229, 229, 229, 0.3);
+      color: #ffffff;
+    }
+  }
 
   .navbar-inner {
     background: none;
@@ -43,7 +78,7 @@ body {
     &:focus,
     &:hover,
     .active {
-      background: rgba(229, 229, 229, 0.3);
+      background: rgba(229, 229, 229, 0.2);
     }
   }
 
