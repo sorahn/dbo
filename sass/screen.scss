@@ -6,8 +6,8 @@
 @import "compass/css3";
 
 @font-face {
-  font-family: Calibri;
-  src: url(calibri.woff);
+  font-family: "Century Gothic";
+  src: url(century_gothic.ttf);
 }
 
 @mixin hoverActiveFocus($property, $value) {
@@ -17,7 +17,8 @@
 }
 
 body {
-  background: rgb(195, 201, 234) url(../images/background.png) no-repeat;
+  background: rgb(208, 214, 240) url(http://destiny.bungie.org/images/dbo_bgm.jpg) no-repeat;
+  background-size: 100% auto;
 }
 
 .btn {
@@ -69,10 +70,14 @@ body {
 
   .navbar-inner {
     background: none;
+    padding: 0;
+    border-bottom: none;
   }
 
   .btn-navbar {
     background: none;
+    position: absolute;
+    right: 0;
 
     &:active,
     &:focus,
@@ -83,23 +88,33 @@ body {
   }
 
   .brand {
-    font-family: Calibri;
+    font-family: "Century Gothic";
     font-weight: 600;
-    font-size: 40px;
+    font-size: 36px;
     height: 40px;
     line-height: 40px;
-
     color: #ffffff;
+    float: none;
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+    padding: 0 4px 0 0;
 
-    // // needs latest Compass, add '@import "compass"' to your scss
-    // background-color: #ecedf1; // Old browsers
-    // @include filter-gradient(#ecedf1, #5b6990, vertical); // IE6-9
-    // @include background-image(linear-gradient(top,  #ecedf1 0%,#5b6990 100%));
-
-    // @include background-clip(text);
-    // -webkit-text-fill-color: transparent;
-
+    background-color: #b7c0db;
+    @include filter-gradient(#b7c0db, #6d7ca4, vertical);
+    @include background-image(linear-gradient(top,  #b7c0db 0%,#bdc5de 4%,#eef2fd 24%,#d5dcec 47%,#a5afcc 48%,#9fabc9 52%,#909bbe 63%,#7480a5 79%,#66749a 89%,#6d7ca4 100%));
+    @include background-clip(text);
     @include text-shadow(none);
-    padding: 0 0 0 10px;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      right: 0;
+      width: 100%;
+      padding-right: 4px;
+      z-index: -1;
+      @include text-shadow(0 0 13px rgba(38,48,81,.75));
+    };
   }
 }
