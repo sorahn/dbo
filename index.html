@@ -1,145 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Destiny Awaits</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <title>Bootstrap + Sidetap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen" href="/Sidetap/src/sidetap.css" />
 
-  <!-- Le fav and touch icons -->
-  <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/images/favicon.ico">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <script id="article-template" type="text/x-handlebars-template">
+      <article style="padding:0 10px">
+        <header>
+          <h4>{{headline}}</h4>
+        </header>
 
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/stylesheets/style.css">
-  <base href="http://destiny.bungie.org/">
+        {{{mobileBody}}}
 
-  <script id="article-template" type="text/x-handlebars-template">
-    <article>
-      <header>
-        <h4>{{headline}}</h4>
-      </header>
+        <footer class="clearfix">
+          <small class="pull-right small">
+            ({{poster}})
+          </small>
+        </footer>
+        <hr>
+      </article>
+    </script>
 
-      {{{mobileBody}}}
+  </head>
+  <body>
+    <main class="sidetap" role="main">
 
-      <footer class="clearfix">
-        <small class="pull-right small">
-          ({{poster}})
-        </small>
-      </footer>
-    </article>
-  </script>
+      <nav class="stp-nav">
+        <ul class="nav nav-tabs nav-stacked">
+          <li>
+            <a href="#" class="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Formu
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-</head>
-<body>
+      <section class="stp-content">
+        <header class="stp-fake-header"><h1>&nbsp;</h1></header>
+        <div class="stp-overlay nav-toggle">&nbsp;</div>
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+        <div class="stp-content-panel" id="news">
 
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
+          <div class="navbar navbar-fixed-top" style="position: absolute; margin: 0">
+            <div class="navbar-inner">
+              <div class="container">
 
-        <a class="brand" href="#" data-text='&nbsp;D· B· O'>&nbsp;D· B· O</a>
+                <a class="btn btn-navbar btn-menu" style="float: left">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
 
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li>
-              <form class="navbar-search">
-                <input type="text" class="search-query input-block-level" placeholder="Search The News Archive">
-              </form>
-            </li>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Forum</a></li>
-            <li class="divider-vertical divider-horizontal"></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+                <a class="btn btn-navbar btn-top" style="padding: 3px 10px">
+                  <i class="icon-chevron-up"></i>
+                </a>
 
-      </div>
-    </div>
-  </div>
+                <a class="brand">Destiny.Bungie.Org</a>
 
-  <div class="container">
-    <section id="articles"></section>
-    <footer>
-      <p>&copy; Company 2012</p>
-    </footer>
-  </div> <!-- /container -->
+              </div>
+            </div>
+          </div>
 
-  <!-- Le javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="//code.jquery.com/jquery.js"></script>
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
-  <script>
-    $(function () {
+          <div class="stp-content-frame">
+            <div class="stp-content-body">
+              <div id="articles" style="padding-top: 50px"></div>
+            </div>
+          </div>
 
-      $('[href=#]').on('click', function (e) {
-        e.preventDefault();
-      });
+        </div><!-- /#news -->
+      </section>
 
-      $('.btn').on('touchend', function (e) {
-        $(this).trigger('click');
-        e.preventDefault();
-      })
+    </main>
 
-      $('.nav-collapse').on('hide', function () {
-        var $btn = $('.btn-navbar'),
-            $parent = $btn.parent(),
-            $next = $btn.next();
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+    <script type="text/javascript" src="/Sidetap/src/sidetap.js"></script>
+    <script src="/src/dbo.js"></script>
 
-        $btn.detach().insertBefore($next).blur();
-      })
-
-      $.getJSON('http://localhost:3000/posts').done(onDone);
-
-      setTimeout( hideAddressBar, 5);
-
-      // Functions
-      function onDone(data) {
-        var template = Handlebars.compile( $('#article-template').html() ),
-            $articles = $('#articles');
-
-        $(data).each( function () {
-          this.mobileBody = mobilizeContent(this);
-          $articles.append( template(this) );
-        });
-      }
-
-      function mobilizeContent( post ) {
-        var $body = $('<div/>').html(post.body),
-
-        // Lets make the images look a little nicer.
-        $img = $body.find('img');
-        $img.addClass('thumbnail');
-
-        $iframe = $body.find('iframe');
-        $iframe.prop('width', '100%').prop('height', '');
-
-        var html = $body.html();
-        return html;
-      }
-
-      function hideAddressBar() {
-        $('body').css('paddingBottom', 5000);
-        window.scrollTo(0, 1);
-        setTimeout( function () {
-          $('body').css('paddingBottom', 0);
-        }, 50);
-      }
-
-    })
-  </script>
-
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-</body>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
 </html>

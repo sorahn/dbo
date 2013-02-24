@@ -4,3 +4,6 @@
 [submodule "FeedEk"]
 	path = FeedEk
 	url = git@github.com:enginkizil/FeedEk.git
+[submodule "Sidetap"]
+	path = Sidetap
+	url = gh:sorahn/Sidetap
