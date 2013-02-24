@@ -15,7 +15,25 @@
   <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-  <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/stylesheets/style.css">
+  <base href="http://destiny.bungie.org/">
+
+  <script id="article-template" type="text/x-handlebars-template">
+    <article>
+      <header>
+        <h4>{{headline}}</h4>
+      </header>
+
+      {{{mobileBody}}}
+
+      <footer class="clearfix">
+        <small class="pull-right small">
+          ({{poster}})
+        </small>
+      </footer>
+    </article>
+  </script>
+
 </head>
 <body>
 
@@ -29,7 +47,7 @@
           <span class="icon-bar"></span>
         </a>
 
-        <a class="brand" href="/" data-text='&nbsp;D· B· O'>&nbsp;D· B· O</a>
+        <a class="brand" href="#" data-text='&nbsp;D· B· O'>&nbsp;D· B· O</a>
 
         <div class="nav-collapse">
           <ul class="nav">
@@ -50,12 +68,7 @@
   </div>
 
   <div class="container">
-    <section id="articles">
-
-    </section>
-
-    <hr>
-
+    <section id="articles"></section>
     <footer>
       <p>&copy; Company 2012</p>
     </footer>
@@ -63,19 +76,8 @@
 
   <!-- Le javascript
   ================================================== -->
-
-  <script id="article-template" type="text/x-handlebars-template">
-    <article>
-      <header>
-        <h3>{{title}}</h3>
-      </header>
-
-      {{{description}}}
-    </article>
-  </script>
-
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
   <script>
@@ -98,8 +100,7 @@
         $btn.detach().insertBefore($next).blur();
       })
 
-      $.get("http://pipes.yahoo.com/pipes/pipe.run?_id=2FV68p9G3BGVbc7IdLq02Q&_render=json&feedcount=10&feedurl=http%3A%2F%2Fdestiny.bungie.org%2Frss.xml")
-        .done(onDone);
+      $.getJSON('http://localhost:3000/posts').done(onDone);
 
       setTimeout( hideAddressBar, 5);
 
@@ -108,9 +109,24 @@
         var template = Handlebars.compile( $('#article-template').html() ),
             $articles = $('#articles');
 
-        $(data.value.items).each( function () {
+        $(data).each( function () {
+          this.mobileBody = mobilizeContent(this);
           $articles.append( template(this) );
         });
+      }
+
+      function mobilizeContent( post ) {
+        var $body = $('<div/>').html(post.body),
+
+        // Lets make the images look a little nicer.
+        $img = $body.find('img');
+        $img.addClass('thumbnail');
+
+        $iframe = $body.find('iframe');
+        $iframe.prop('width', '100%').prop('height', '');
+
+        var html = $body.html();
+        return html;
       }
 
       function hideAddressBar() {
