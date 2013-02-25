@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap + Sidetap</title>
+    <title>Destiny Awaits</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="/Sidetap/src/sidetap.css" />
 
     <script id="article-template" type="text/x-handlebars-template">
-      <article style="padding:0 10px">
+      <article style="padding:0 10px" id="id_{{news_id}}">
         <header>
           <h4>{{headline}}</h4>
         </header>
@@ -29,23 +29,50 @@
       </article>
     </script>
 
+    <script id="sidetap-pane-template" type="text/x-handlebasr-template">
+
+    </script>
+
   </head>
   <body>
     <main class="sidetap" role="main">
 
       <nav class="stp-nav">
-        <ul class="nav nav-tabs nav-stacked">
-          <li>
-            <a href="#" class="active">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Formu
-            </a>
-          </li>
-        </ul>
+
+        <div class="navbar navbar-fixed-top" style="position: absolute; margin: 0">
+          <div class="navbar-inner" style="padding:0">
+            <div class="container nav-collapse" style="height: auto">
+              <ul class="nav">
+
+                <li>
+                  <form class="navbar-search form-inline" style="margin: 0">
+                    <input type="hidden" name="method" value="exact" id="search_method">
+                    <input type="text" class="search-query input-block-level" placeholder="Search The News Archive">
+
+                    <div class="btn-group text-center btn-block" data-toggle="buttons-radio">
+                      <a class="btn update-input" style="border-radius: 0" href="#" data-target="#search_method" data-method="any">Any</a>
+                      <a class="btn update-input" style="border-radius: 0" href="#" data-target="#search_method" data-method="all">All</a>
+                      <a class="btn update-input active" style="border-radius: 0" href="#" data-target="#search_method" data-method="exact">Exact</a>
+                    </div>
+                  </form>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-chevron-right pull-right"></i>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-chevron-right pull-right"></i>
+                    Forum
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <section class="stp-content">
@@ -64,8 +91,8 @@
                   <span class="icon-bar"></span>
                 </a>
 
-                <a class="btn btn-navbar btn-top" style="padding: 3px 10px">
-                  <i class="icon-chevron-up"></i>
+                <a id="anchor" class="btn btn-navbar btn-top" style="padding: 3px 10px">
+                  <i class="icon-refresh"></i>
                 </a>
 
                 <a class="brand">Destiny.Bungie.Org</a>
@@ -86,7 +113,7 @@
     </main>
 
     <script src="//code.jquery.com/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
     <script type="text/javascript" src="/Sidetap/src/sidetap.js"></script>
     <script src="/src/dbo.js"></script>

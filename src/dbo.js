@@ -11,13 +11,31 @@ $(function () {
   });
 
   $('.btn-menu').on('click', st.toggle_nav);
-  $('.btn-top').on('click', scrollToTop);
+  $('#anchor').on('click', refreshContent);
+
   $('.brand').on('touchend', function (e) {
     e.preventDefault();
     $('header h1').last().trigger('click');
-  })
+  });
 
-  $.getJSON('http://localhost:3000/posts').done(onDone);
+  $('.stp-content-body').on('scroll', function (e) {
+    if( $('article:nth-child(2)').offset().top < 0 ) {
+      $('#anchor i').attr('class', 'icon-chevron-up');
+      $('#anchor').off('click').on('click', scrollToTop);
+    } else {
+      $('#anchor i').attr('class', 'icon-refresh');
+      $('#anchor').off('click').on('click', refreshContent);
+    }
+  });
+
+  refreshContent();
+
+  $('.btn-menu').trigger('click');
+
+  function refreshContent() {
+    $('#anchor i').attr('class', 'icon-refresh icon-spin');
+    $.getJSON('http://localhost:3000/posts').done(onDone);
+  }
 
   // Functions
   function scrollToTop() {
@@ -34,6 +52,8 @@ $(function () {
       this.mobileBody = mobilizeContent(this);
       $articles.append( _template(this) );
     });
+
+    $('#anchor i').removeClass('icon-spin');
   }
 
   function mobilizeContent( post ) {
@@ -56,21 +76,29 @@ $(function () {
 
       if( _float !== "right" && _float !== "left" ) {
         $img.wrap('<div class="thumbnail">');
+        $img.removeAttr('style');
       }
 
       dboPrefix( $img, 'src' );
     }
   }
 
+  //--- BEGIN-DEBUG --//
+  // <ing src="/images/whateveriwant">
+  // $el = $('img')
+  // attr = 'src'
   function dboPrefix( $el, attr ) {
     var _str;
+
     if( $el.length ) {
       _str = $el.attr(attr);
 
+      // _str = /images/whateveriwant
       if( _str.indexOf('/') === 0 ) {
         $el.prop(attr, 'http://destiny.bungie.org' + _str );
       }
     }
   }
+  //--- END-DEBUG ---//
 
 });
