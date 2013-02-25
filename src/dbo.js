@@ -32,7 +32,7 @@ $(function () {
 
   function refreshContent() {
     $('#anchor i').attr('class', 'icon-refresh icon-spin');
-    $.getJSON('http://localhost:3000/posts').done(onDone);
+    $.getJSON('http://sorahn.net:3000/posts').done(onDone);
   }
 
   // Functions
