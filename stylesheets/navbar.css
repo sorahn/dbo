@@ -1,0 +1,76 @@
+/*
+Syntax error: Undefined mixin 'border-radius'.
+        on line 3 of /Users/sorahn/Projects/dbo/sass/navbar.scss, in `border-radius'
+        from line 3 of /Users/sorahn/Projects/dbo/sass/navbar.scss
+
+1: /Users/sorahn/Projects/dbo/sass/navbar.scss
+
+Backtrace:
+/Users/sorahn/Projects/dbo/sass/navbar.scss:3:in `border-radius'
+/Users/sorahn/Projects/dbo/sass/navbar.scss:3
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:170:in `visit_mixin'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/engine.rb:299:in `_render'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/../sass/engine.rb:246:in `render'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:140:in `compile'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:139:in `compile'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/logger.rb:45:in `red'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:138:in `compile'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:103:in `run'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `each'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `run'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:100:in `run'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/update_project.rb:45:in `perform'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/base.rb:18:in `execute'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:29
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:43:in `call'
+/Users/sorahn/Downloads/LiveReload.v2.3.8.MacOSX.Cracked-CORE/cr-554cd/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:43
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'border-radius'.\A         on line 3 of /Users/sorahn/Projects/dbo/sass/navbar.scss, in `border-radius'\A         from line 3 of /Users/sorahn/Projects/dbo/sass/navbar.scss\A \A 1: /Users/sorahn/Projects/dbo/sass/navbar.scss"; }

@@ -10,43 +10,91 @@
   src: url(century_gothic.ttf);
 }
 
-@mixin hoverActiveFocus($property, $value) {
-    &:hover, &:active, &:focus {
-        #{$property}: $value;
-    }
-}
-
-body {
-  background: rgb(208, 214, 240) url(../images/background@2x.png) no-repeat;
-  // background: rgb(208, 214, 240) url(../images/background-with-text.png) no-repeat;
-  background-size: 320px auto;
-}
+@import"navbar";
 
 .btn {
   @include border-radius(0);
 }
 
-.navbar-search {
-  .search-query {
-    @include border-radius(0);
+#news {
+  background: #ced4ec url(../images/background.jpg) no-repeat top center;
+  background-size: auto 223px;
+}
+
+.stp-nav {
+  .navbar {
+    position: absolute;
+    margin: 0px;
+  }
+
+  .navbar-inner {
+    padding: 0;
+  }
+
+  .nav-collapse {
+    height: 100%;
+  }
+
+  .navbar-search {
+    margin: 0;
   }
 }
 
-.nav-collapse {
-  .nav > li >, .dropdown-menu {
-    a {
-      @include border-radius(0);
-      color: #ffffff;
-      text-shadow: 0 1px 0 #000000;
+blockquote {
+  p {
+    font-size: 14px;
 
-      &:hover,
-      &:focus {
-        color: #ffffff;
-        background: rgba(229, 229, 229, 0.4);
-      }
+    + p {
+      margin-top: 10px;
     }
   }
+}
 
+.thumbnail {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#articles {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 50px 10px;
+}
+
+article {
+  padding: 5px;
+
+  &::after {
+    display: block;
+    content: '';
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(left,  rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%));
+    height: 2px;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: #031780;
+}
+
+.tricorn {
+  margin: 0;
+  @include border-radius(0);
+  border-bottom: none;
+
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+.small {
+  font-size: .75em;
+}
+/*
+.nav-collapse {
   .nav {
     margin-bottom: 0;
   }
@@ -122,24 +170,4 @@ body {
   }
 }
 
-blockquote {
-  p {
-    font-size: 14px;
-
-    + p {
-      margin-top: 5px;
-    }
-  }
-}
-
-.thumbnail {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-article {
-  border-bottom: 1px solid #666;
-}
-
-a {
-  color: #031780;
-}
+*/

@@ -11,9 +11,10 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" media="screen" href="/Sidetap/src/sidetap.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 
     <script id="article-template" type="text/x-handlebars-template">
-      <article style="padding:0 10px" id="id_{{news_id}}">
+      <article id="id_{{news_id}}">
         <header>
           <h4>{{headline}}</h4>
         </header>
@@ -25,7 +26,6 @@
             ({{poster}})
           </small>
         </footer>
-        <hr>
       </article>
     </script>
 
@@ -39,41 +39,69 @@
 
       <nav class="stp-nav">
 
-        <div class="navbar navbar-fixed-top" style="position: absolute; margin: 0">
-          <div class="navbar-inner" style="padding:0">
-            <div class="container nav-collapse" style="height: auto">
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container nav-collapse">
               <ul class="nav">
 
                 <li>
-                  <form class="navbar-search form-inline" style="margin: 0">
+                  <form class="navbar-search form-inline">
                     <input type="hidden" name="method" value="exact" id="search_method">
                     <input type="text" class="search-query input-block-level" placeholder="Search The News Archive">
 
                     <div class="btn-group text-center btn-block" data-toggle="buttons-radio">
-                      <a class="btn update-input" style="border-radius: 0" href="#" data-target="#search_method" data-method="any">Any</a>
-                      <a class="btn update-input" style="border-radius: 0" href="#" data-target="#search_method" data-method="all">All</a>
-                      <a class="btn update-input active" style="border-radius: 0" href="#" data-target="#search_method" data-method="exact">Exact</a>
+                      <a class="btn update-input" href="#" data-target="#search_method" data-method="any">Any</a>
+                      <a class="btn update-input" href="#" data-target="#search_method" data-method="all">All</a>
+                      <a class="btn update-input active" href="#" data-target="#search_method" data-method="exact">Exact</a>
                     </div>
                   </form>
                 </li>
-                <li>
-                  <a href="#" class="active">
+
+                <li class="active">
+                  <a href="#">
                     <i class="icon-chevron-right pull-right"></i>
+                    <i class="icon-home"></i>
                     Home
                   </a>
                 </li>
+
                 <li>
                   <a href="#">
                     <i class="icon-chevron-right pull-right"></i>
+                    <i class="icon-comments"></i>
                     Forum
                   </a>
                 </li>
 
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+                <li>
+                  <a href="#">
+                    <i class="icon-chevron-right pull-right"></i>
+                    <i class="icon-question-sign"></i>
+                    About
+                  </a>
+                </li>
+
+                <li class="text-center">
+                  <div class="well tricorn">
+                    <img src="/images/tricorn.png">
+                    <p class="small">
+                      <strong>We are NOT Bungie, Inc.!<br>
+                        Bungie Inc. are <a href="http://bungie.net/">bungie.net</a>!</strong><br>
+                      Destiny © Bungie Inc., 2010-2013<br>
+                      Intellectual © destiny.bungie.org, 2012-2013
+                    </small>
+                  </div>
+                </li>
+
+                <li>
+                </li>
+
+              </ul><!-- .nav -->
+            </div><!-- .navbar -->
+          </div><!-- .navbar-inner -->
+        </div><!-- .container -->
+
+      </nav><!-- .stp-nav -->
 
       <section class="stp-content">
         <header class="stp-fake-header"><h1>&nbsp;</h1></header>
@@ -81,21 +109,21 @@
 
         <div class="stp-content-panel" id="news">
 
-          <div class="navbar navbar-fixed-top" style="position: absolute; margin: 0">
+          <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-              <div class="container">
+              <div class="container clearfix">
 
-                <a class="btn btn-navbar btn-menu" style="float: left">
+                <a class="btn btn-navbar btn-menu">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
 
-                <a id="anchor" class="btn btn-navbar btn-top" style="padding: 3px 10px">
+                <a id="anchor" class="btn btn-navbar btn-top">
                   <i class="icon-refresh"></i>
                 </a>
 
-                <a class="brand">Destiny.Bungie.Org</a>
+                <a class="brand" data-text="D · B · O">D · B · O</a>
 
               </div>
             </div>
@@ -103,7 +131,9 @@
 
           <div class="stp-content-frame">
             <div class="stp-content-body">
-              <div id="articles" style="padding-top: 50px"></div>
+              <div class="container">
+                <div id="articles"></div>
+              </div>
             </div>
           </div>
 

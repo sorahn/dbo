@@ -7,22 +7,7 @@
   src: url(century_gothic.ttf);
 }
 
-/* line 19, ../sass/style.scss */
-body {
-  background: #d0d6f0 url(../images/background@2x.png) no-repeat;
-  background-size: 320px auto;
-}
-
-/* line 25, ../sass/style.scss */
-.btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-/* line 30, ../sass/style.scss */
+/* line 2, ../sass/_navbar.scss */
 .navbar-search .search-query {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -31,70 +16,57 @@ body {
   border-radius: 0;
 }
 
-/* line 37, ../sass/style.scss */
-.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #000000;
-}
-/* line 43, ../sass/style.scss */
-.nav-collapse .nav > li > a:hover, .nav-collapse .nav > li > a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
-  color: #ffffff;
-  background: rgba(229, 229, 229, 0.4);
-}
-/* line 50, ../sass/style.scss */
-.nav-collapse .nav {
-  margin-bottom: 0;
-}
-/* line 55, ../sass/style.scss */
-.nav-collapse .navbar-form,
-.nav-collapse .navbar-search {
+/* line 7, ../sass/_navbar.scss */
+.navbar-fixed-top {
+  position: absolute;
   margin: 0;
+}
+/* line 11, ../sass/_navbar.scss */
+.navbar-fixed-top .navbar-inner {
+  background: url(../images/background.jpg) no-repeat top center;
+  padding: 0;
   border: 0;
 }
-
-/* line 66, ../sass/style.scss */
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  background: rgba(229, 229, 229, 0.3);
-  color: #ffffff;
+/* line 17, ../sass/_navbar.scss */
+.navbar-fixed-top .btn-menu {
+  position: absolute;
+  left: 0;
+  width: auto;
 }
-/* line 72, ../sass/style.scss */
-.navbar .navbar-inner {
-  background: none;
-  padding: 0;
-  border-bottom: none;
-}
-/* line 78, ../sass/style.scss */
-.navbar .btn-navbar {
-  background: none;
+/* line 23, ../sass/_navbar.scss */
+.navbar-fixed-top .btn-top {
   position: absolute;
   right: 0;
-  background: rgba(229, 229, 229, 0.1);
+  z-index: 5;
+  padding: 3px 10px;
 }
-/* line 87, ../sass/style.scss */
+
+/* line 32, ../sass/_navbar.scss */
+.navbar .btn-navbar {
+  background: none;
+  background: rgba(229, 229, 229, 0.1);
+  z-index: 5;
+}
+/* line 40, ../sass/_navbar.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar:focus, .navbar .btn-navbar:hover,
 .navbar .btn-navbar .active {
   background: rgba(229, 229, 229, 0.3);
 }
-/* line 92, ../sass/style.scss */
+/* line 45, ../sass/_navbar.scss */
 .navbar .brand {
-  font-family: "Century Gothic";
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
   font-weight: 400;
   font-size: 36.8px;
   height: 40px;
   line-height: 40px;
-  color: #ffffff;
+  padding: 0;
+  margin: 0;
   float: none;
-  text-align: center;
-  display: block;
-  letter-spacing: 4px;
-  padding: 0 8px 0 0;
+  z-index: 1;
+  -webkit-text-fill-color: transparent;
   background-color: #b7c0db;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFB7C0DB', endColorstr='#FF6D7CA4');
@@ -108,39 +80,208 @@ body {
   -moz-background-clip: text;
   background-clip: text;
   text-shadow: none;
-  -webkit-text-fill-color: transparent;
-}
-/* line 113, ../sass/style.scss */
-.navbar .brand::after {
-  content: attr(data-text);
-  position: absolute;
-  right: 0;
-  width: 100%;
-  padding-right: 4px;
-  z-index: -1;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
 }
 
-/* line 126, ../sass/style.scss */
+/* line 84, ../sass/_navbar.scss */
+.nav-collapse .nav {
+  margin-bottom: 0;
+}
+/* line 89, ../sass/_navbar.scss */
+.nav-collapse .navbar-form,
+.nav-collapse .navbar-search {
+  margin: 0;
+  border: 0;
+}
+/* line 94, ../sass/_navbar.scss */
+.nav-collapse i {
+  line-height: 20px;
+}
+/* line 99, ../sass/_navbar.scss */
+.nav-collapse .btn-group .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 15, ../sass/style.scss */
+.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 19, ../sass/style.scss */
+#news {
+  background: #ced4ec url(../images/background.jpg) no-repeat top center;
+  background-size: auto 223px;
+}
+
+/* line 25, ../sass/style.scss */
+.stp-nav .navbar {
+  position: absolute;
+  margin: 0px;
+}
+/* line 30, ../sass/style.scss */
+.stp-nav .navbar-inner {
+  padding: 0;
+}
+/* line 34, ../sass/style.scss */
+.stp-nav .nav-collapse {
+  height: 100%;
+}
+/* line 38, ../sass/style.scss */
+.stp-nav .navbar-search {
+  margin: 0;
+}
+
+/* line 44, ../sass/style.scss */
 blockquote p {
   font-size: 14px;
 }
-/* line 129, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 blockquote p + p {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .thumbnail {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* line 139, ../sass/style.scss */
-article {
-  border-bottom: 1px solid #666;
+/* line 57, ../sass/style.scss */
+#articles {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 50px 10px;
 }
 
-/* line 143, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
+article {
+  padding: 5px;
+}
+/* line 66, ../sass/style.scss */
+article::after {
+  display: block;
+  content: '';
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIxMCUiIHN0b3AtY29sb3I9InJnYmEoMCwgMCwgMCwgMCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwLjY1KSIvPjxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDApIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(10%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(90%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%);
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 90%);
+  height: 2px;
+}
+/* line 74, ../sass/style.scss */
+article h4 {
+  margin-top: 0;
+}
+
+/* line 79, ../sass/style.scss */
 a {
   color: #031780;
 }
+
+/* line 83, ../sass/style.scss */
+.tricorn {
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border-bottom: none;
+}
+/* line 88, ../sass/style.scss */
+.tricorn img {
+  margin-bottom: 20px;
+}
+
+/* line 93, ../sass/style.scss */
+.small {
+  font-size: .75em;
+}
+
+/*
+.nav-collapse {
+  .nav {
+    margin-bottom: 0;
+  }
+
+  .navbar-form,
+  .navbar-search {
+    margin: 0;
+    border: 0;
+  }
+}
+
+.navbar {
+
+  .nav > .active > {
+    a,
+    a:hover,
+    a:focus {
+      background: rgba(229, 229, 229, 0.3);
+      color: #ffffff;
+    }
+  }
+
+  .navbar-inner {
+    background: none;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .btn-navbar {
+    background: none;
+    position: absolute;
+    right: 0;
+    background: rgba(229, 229, 229, 0.1);
+
+    &:active,
+    &:focus,
+    &:hover,
+    .active {
+      background: rgba(229, 229, 229, 0.3);
+    }
+  }
+
+  .brand {
+    $base: 40px;
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: $base * .92;
+    height: $base;
+    line-height: $base;
+    color: #ffffff;
+    float: none;
+    text-align: center;
+    display: block;
+    letter-spacing: $base * .10;
+    padding: 0 8px 0 0;
+
+    background-color: #b7c0db;
+    @include filter-gradient(#b7c0db, #6d7ca4, vertical);
+    @include background-image(linear-gradient(top,  #b7c0db 0%,#bdc5de 4%,#eef2fd 24%,#d5dcec 47%,#a5afcc 48%,#9fabc9 52%,#909bbe 63%,#7480a5 79%,#66749a 89%,#6d7ca4 100%));
+    @include background-clip(text);
+    @include text-shadow(none);
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      right: 0;
+      width: 100%;
+      padding-right: 4px;
+      z-index: -1;
+      @include text-shadow(0 1px 0 rgba(0,0,0,.55));
+    }
+  }
+}
+
+*/
