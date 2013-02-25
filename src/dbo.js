@@ -30,8 +30,6 @@ $(function () {
 
   refreshContent();
 
-  $('.btn-menu').trigger('click');
-
   function refreshContent() {
     $('#anchor i').attr('class', 'icon-refresh icon-spin');
     $.getJSON('http://localhost:3000/posts').done(onDone);
