@@ -7,3 +7,6 @@
 [submodule "Sidetap"]
 	path = Sidetap
 	url = gh:sorahn/Sidetap
+[submodule "fastclick"]
+	path = fastclick
+	url = gh:ftlabs/fastclick
